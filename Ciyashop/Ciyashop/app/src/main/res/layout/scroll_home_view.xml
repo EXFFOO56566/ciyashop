@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/crMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        tools:context="com.example.ciyashop.activity.HomeActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/svHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llTopCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvTopCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:nestedScrollingEnabled="false"
+                            android:scrollbars="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMainContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.viewpager.widget.ViewPager
+                                    android:id="@+id/vpBanner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_100" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutDots"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginTop="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_5"
+                                    android:layout_marginBottom="@dimen/value_5"
+                                    android:gravity="end"
+                                    android:orientation="horizontal" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llmenusOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:nestedScrollingEnabled="false"
+                                android:overScrollMode="never" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llmenusTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/llVerticalBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <com.example.ciyashop.customview.CustomViewPager
+                                android:id="@+id/rvVerticalBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_180sdp" />
+
+                            <!--                        <androidx.viewpager.widget.ViewPager-->
+                            <!--                            android:id="@+id/rvVerticalBanner"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:layout_gravity="center"-->
+                            <!--                            android:background="@android:color/transparent"-->
+                            <!--                             />-->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMenus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/llSixReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp">
+
+                                <com.example.ciyashop.customview.textview.TextViewLight
+                                    android:id="@+id/tvReasonNameOne"
+                                    style="@style/txt_black_micro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="REASON'S"
+                                    android:textAlignment="viewStart"
+                                    android:textDirection="locale" />
+
+                                <com.example.ciyashop.customview.textview.TextViewBold
+                                    android:id="@+id/tvReasonNameTwo"
+                                    style="@style/txt_black_big"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="WHY CHOOSE US"
+                                    android:textAlignment="viewStart"
+                                    android:textDirection="locale" />
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvSixReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRecentView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp">
+
+                                <com.example.ciyashop.customview.textview.TextViewLight
+                                    android:id="@+id/tvRecentNameOne"
+                                    style="@style/txt_black_micro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="@string/recently"
+                                    android:textAlignment="viewStart"
+                                    android:textDirection="locale" />
+
+                                <com.example.ciyashop.customview.textview.TextViewBold
+                                    android:id="@+id/tvRecentNameTwo"
+                                    style="@style/txt_black_big"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/viewed_product"
+                                    android:textAlignment="viewStart"
+                                    android:textDirection="locale" />
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvRecentOffer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/value_1"
+                                android:nestedScrollingEnabled="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/layout_whatsapp" />
+
+        <include layout="@layout/layout_bottom_bar" />
+
+        <!-- Main layout -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/ablHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_back_white" />
+
+                        <ImageView
+                            android:id="@+id/ivLogo"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="start|center"
+                            android:layout_marginStart="@dimen/value_2"
+                            android:layout_marginTop="@dimen/value_2"
+                            android:layout_marginBottom="@dimen/value_2"
+                            android:src="@drawable/logo" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/value_4"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_search_white" />
+
+                    <ImageView
+                        android:id="@+id/ivNotification"
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/value_10"
+                        android:padding="@dimen/value_1"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/flCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/value_5"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivCart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_shopping_cart_white" />
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:id="@+id/tvToolCart"
+                            style="@style/txt_white_micro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|top"
+                            android:layout_marginTop="@dimen/value_3"
+                            android:background="@drawable/black_round_corner_button"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/value_3"
+                            android:paddingLeft="@dimen/value_3"
+                            android:paddingTop="@dimen/value_1.5"
+                            android:paddingEnd="@dimen/value_3"
+                            android:paddingRight="@dimen/value_3"
+                            android:paddingBottom="@dimen/value_1.5"
+                            android:text="1"
+                            android:textAlignment="viewEnd"
+                            android:textDirection="locale" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</merge>

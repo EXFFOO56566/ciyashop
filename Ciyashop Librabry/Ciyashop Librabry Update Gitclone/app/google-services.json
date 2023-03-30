@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "project_number": "318692513251",
+    "project_id": "ciyashop-3773d",
+    "storage_bucket": "ciyashop-3773d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318692513251:android:5ff589f9fe4df21733fcd6",
+        "android_client_info": {
+          "package_name": "com.example.ciyashop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318692513251-r8hprk5eacehebhdks8h463efpi7hag6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ciyashop",
+            "certificate_hash": "7970a209fe8e6b04cb2b43adff679819d979cf78"
+          }
+        },
+        {
+          "client_id": "318692513251-v3712gskfahamvn0nv11adplpq61emkg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ciyashop",
+            "certificate_hash": "9e11d6c90b658968becbaeaa1cc152227e5ddee6"
+          }
+        },
+        {
+          "client_id": "318692513251-1a9k5l0a78qjq78gfea23dn4f3g1m7et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlWhsb0JLGfj8MumCk3M9ZIGSby6CTakc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318692513251-1a9k5l0a78qjq78gfea23dn4f3g1m7et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318692513251:android:1932259315179bcb33fcd6",
+        "android_client_info": {
+          "package_name": "com.potenza.cardealer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318692513251-9gtpmm8op4hgbonlg0a912lpe1ejpqm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.potenza.cardealer",
+            "certificate_hash": "9e11d6c90b658968becbaeaa1cc152227e5ddee6"
+          }
+        },
+        {
+          "client_id": "318692513251-1a9k5l0a78qjq78gfea23dn4f3g1m7et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlWhsb0JLGfj8MumCk3M9ZIGSby6CTakc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318692513251-1a9k5l0a78qjq78gfea23dn4f3g1m7et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

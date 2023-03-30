@@ -1,0 +1,9 @@
+<wpml-config>
+	<admin-texts>
+		<key name="pgs_woo_api_home_option">
+			<key name="product_banners_title" />
+			<key name="delete_account_alert_title" />
+			<key name="delete_account_alert_message" />
+		</key>
+	</admin-texts>
+</wpml-config>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.example.ciyashop.customview.textview.TextViewLight
+        android:id="@+id/tvInfoPageTitle"
+        style="@style/txt_black_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/_8sdp"
+        android:text=""
+        android:textAlignment="viewStart"
+        android:textDirection="locale" />
+
+    <com.example.ciyashop.customview.textview.TextViewRegular
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+</LinearLayout>

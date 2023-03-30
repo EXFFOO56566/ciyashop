@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-30dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpProductImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    android:background="@drawable/placeholder" />
+
+                <LinearLayout
+                    android:id="@+id/layoutDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_20"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_240sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivShare"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:background="@drawable/ic_rounded"
+                        android:padding="@dimen/_4sdp"
+                        app:srcCompat="@drawable/ic_share_gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_260sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.example.ciyashop.customview.textview.TextViewBold
+                        android:id="@+id/tvProductName"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_weight="1"
+                            android:gravity="start|center"
+                            android:orientation="horizontal"
+                            android:textAlignment="viewStart"
+                            android:textDirection="locale"
+                            tools:ignore="RtlCompat">
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvPrice1"
+                                style="@style/txt_black_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAlignment="viewStart"
+                                android:textDirection="locale"
+                                tools:ignore="RtlCompat" />
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvPrice"
+                                style="@style/txt_color_primary_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/value_5"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorAccent"
+                                android:textDirection="locale"
+                                tools:ignore="RtlCompat" />
+
+                        </LinearLayout>
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:progressBackgroundTint="@color/star_color"
+                            android:progressTint="@color/yello"
+                            android:rating="0"
+                            android:secondaryProgressTint="@color/star_color"
+                            android:stepSize="0.5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvDiscount"
+                                style="@style/txt_white_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:background="@drawable/discount_horizontal"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="" />
+
+                        </LinearLayout>
+
+                        <com.example.ciyashop.customview.textview.TextViewLight
+                            android:id="@+id/tvAvailibilitytext"
+                            style="@style/txt_gray_micro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/value_1"
+                            android:gravity="center"
+                            android:text="@string/availability" />
+
+                        <com.example.ciyashop.customview.textview.TextViewBold
+                            android:id="@+id/tvAvailibility"
+                            style="@style/txt_color_primary_micro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/value_2"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        android:id="@+id/tvReward"
+                        style="@style/txt_gray_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/secondary_border"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_6sdp"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvColor"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/value_5" />
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:layout_width="@dimen/value_0.5"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/value_8"
+                            android:layout_marginLeft="@dimen/value_8"
+                            android:layout_marginTop="@dimen/value_2"
+                            android:layout_marginEnd="@dimen/value_8"
+                            android:layout_marginRight="@dimen/value_8"
+                            android:layout_marginBottom="@dimen/value_2"
+                            android:background="@color/gray" />
+
+                        <LinearLayout
+                            android:id="@+id/llDialog"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.15"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_color_variation" />
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvColor"
+                                style="@style/txt_gray_micro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/value_2"
+                                android:gravity="center"
+                                android:padding="@dimen/value_2"
+                                android:text="4 color" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.example.ciyashop.customview.like.animation.SparkButton
+        android:id="@+id/ivWishList"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/_6sdp"
+        android:background="@drawable/ic_rounded"
+        app:sparkbutton_activeImage="@drawable/ic_primary_heart"
+        app:sparkbutton_iconSize="@dimen/_13sdp"
+        app:sparkbutton_inActiveImage="@drawable/ic_gray_heart"
+        app:sparkbutton_primaryColor="@color/colorPrimary"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryTransperent" />
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llProductVariation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvVariation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.example.ciyashop.customview.textview.TextViewMedium
+                        android:id="@+id/tvDeliveryOptions"
+                        style="@style/txt_black_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_option"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/gray_strok"
+                        android:orientation="horizontal">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etPincode"
+                            style="@style/txt_gray_small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/pincode"
+                            android:padding="@dimen/_6sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textDirection="locale" />
+
+                        <com.example.ciyashop.customview.textview.TextViewBold
+                            android:id="@+id/tvCheck"
+                            style="@style/txt_white_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:text="@string/check"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        android:id="@+id/tvDeliverable"
+                        style="@style/txt_black_micro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/value_2"
+                        android:layout_marginTop="@dimen/value_2"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/white_gray_strok_button"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <com.example.ciyashop.customview.textview.TextViewMedium
+                            android:id="@+id/tv_Info"
+                            style="@style/txt_black_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/info"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorAccent"
+                            android:textDirection="locale" />
+
+                        <WebView
+                            android:id="@+id/wv_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="start"
+                            android:textAlignment="viewStart"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llIsSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.example.ciyashop.customview.textview.TextViewMedium
+                        android:id="@+id/tvSellerInfoTitle"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/Seller_Information"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:id="@+id/llSoldBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <com.example.ciyashop.customview.textview.TextViewLight
+                            style="@style/txt_gray_micro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_1"
+                            android:layout_marginBottom="@dimen/value_1"
+                            android:text="@string/sold_by" />
+
+                        <com.example.ciyashop.customview.textview.TextViewMedium
+                            android:id="@+id/tvSellerName"
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <org.sufficientlysecure.htmltextview.HtmlTextView
+                        android:id="@+id/tvSellerContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3"
+                        android:paddingTop="@dimen/value_5"
+                        android:paddingBottom="@dimen/value_5"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <com.example.ciyashop.customview.textview.TextViewLight
+                            android:id="@+id/tvSellerMore"
+                            style="@style/txt_color_primary_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:gravity="center"
+                            android:text="@string/more"
+                            android:textColor="@color/colorAccent" />
+
+                        <ImageView
+                            android:id="@+id/ivMoreSeller"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_go_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="0dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvContactSeller"
+                                style="@style/txt_white_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/primary_round_button"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:text="@string/contact_seller" />
+
+                        </LinearLayout>
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:id="@+id/tvViewStore"
+                            style="@style/txt_white_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_round_button"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:text="@string/view_store" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGroupProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llQuickOverView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <com.example.ciyashop.customview.textview.TextViewMedium
+                        android:id="@+id/tvQuickOverViewTitle"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/quick_overview"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textDirection="locale" />
+
+                    <com.example.ciyashop.customview.textview.TextViewLight
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:maxLines="3"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.example.ciyashop.customview.textview.TextViewMedium
+                            android:id="@+id/tvMoreQuickOverview"
+                            style="@style/txt_color_primary_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/more"
+                            android:textColor="@color/colorAccent" />
+
+                        <ImageView
+                            android:id="@+id/ivQuickOverViewMore"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="1dp"
+                            app:srcCompat="@drawable/ic_go_primary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProductDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <com.example.ciyashop.customview.textview.TextViewMedium
+                        android:id="@+id/tvProductDetailTitle"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/detail"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textDirection="locale" />
+
+                    <org.sufficientlysecure.htmltextview.HtmlTextView
+                        android:id="@+id/tvProductDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:maxLines="10"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp">
+
+                        <com.example.ciyashop.customview.textview.TextViewLight
+                            android:id="@+id/tvMoreDetail"
+                            style="@style/txt_color_primary_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/more"
+                            android:textColor="@color/colorAccent" />
+
+                        <ImageView
+                            android:id="@+id/ivDetailMore"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/value_0.5"
+                            android:layout_marginTop="@dimen/value_0.5"
+                            app:srcCompat="@drawable/ic_go_primary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llratting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="visible">
+
+                    <com.example.ciyashop.customview.textview.TextViewMedium
+                        android:id="@+id/tvRatingTitle"
+                        style="@style/txt_black_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/ratings_reviews"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewBold
+                                    android:id="@+id/tvAverageRatting"
+                                    style="@style/txt_black_large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0" />
+
+                                <com.example.ciyashop.customview.textview.TextViewRegular
+                                    style="@style/txt_gray_big"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" / 5" />
+
+                            </LinearLayout>
+
+                            <RatingBar
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:isIndicator="true"
+                                android:rating="0"
+                                android:stepSize="0.5"
+                                app:mrb_fillBackgroundStars="true"
+                                app:mrb_progressBackgroundTint="@color/star_color"
+                                app:mrb_progressTint="@color/yello" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_table" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvFive"
+                                    style="@style/txt_black_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5" />
+
+                                <com.example.ciyashop.customview.progressbar.RoundCornerProgressBar
+                                    android:id="@+id/rattingFive"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_1.5"
+                                    android:layout_marginStart="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_10"
+                                    app:rcBackgroundColor="@color/gray_strok"
+                                    app:rcMax="100"
+                                    app:rcProgressColor="@color/green"
+                                    app:rcRadius="0dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvFour"
+                                    style="@style/txt_black_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4" />
+
+                                <com.example.ciyashop.customview.progressbar.RoundCornerProgressBar
+                                    android:id="@+id/rattingFour"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_1.5"
+                                    android:layout_marginStart="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_10"
+                                    app:rcBackgroundColor="@color/gray_strok"
+                                    app:rcMax="100"
+                                    app:rcProgressColor="@color/green"
+                                    app:rcRadius="0dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvThree"
+                                    style="@style/txt_black_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3" />
+
+                                <com.example.ciyashop.customview.progressbar.RoundCornerProgressBar
+                                    android:id="@+id/rattingThree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_1.5"
+                                    android:layout_marginStart="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_10"
+                                    app:rcBackgroundColor="@color/gray_strok"
+                                    app:rcMax="100"
+                                    app:rcProgressColor="@color/green"
+                                    app:rcRadius="0dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvTwo"
+                                    style="@style/txt_black_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2" />
+
+                                <com.example.ciyashop.customview.progressbar.RoundCornerProgressBar
+                                    android:id="@+id/rattingTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_1.5"
+                                    android:layout_marginStart="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_10"
+                                    app:rcBackgroundColor="@color/gray_strok"
+                                    app:rcMax="100"
+                                    app:rcProgressColor="@color/green"
+                                    app:rcRadius="0dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvOne"
+                                    style="@style/txt_black_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1" />
+
+                                <com.example.ciyashop.customview.progressbar.RoundCornerProgressBar
+                                    android:id="@+id/rattingOne"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/value_1.5"
+                                    android:layout_marginStart="@dimen/value_5"
+                                    android:layout_marginEnd="@dimen/value_10"
+                                    app:rcBackgroundColor="@color/gray_strok"
+                                    app:rcMax="100"
+                                    app:rcProgressColor="@color/green"
+                                    app:rcRadius="0dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:id="@+id/tvRateReview"
+                            style="@style/txt_white_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/primary_round_button"
+                            android:gravity="center"
+                            android:padding="@dimen/value_5"
+                            android:text="@string/rate_write_review" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvReview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <com.example.ciyashop.customview.textview.TextViewMedium
+                                android:id="@+id/tvCheckAllReview"
+                                style="@style/txt_black_small"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:text="@string/check_all_review" />
+
+                            <ImageView
+                                android:id="@+id/ivReview"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                app:srcCompat="@drawable/ic_go_primary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRelatedItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <com.example.ciyashop.customview.textview.TextViewLight
+                        android:id="@+id/tvProductName_one"
+                        style="@style/txt_black_micro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/value_5"
+                        android:gravity="start"
+                        android:text="@string/related"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <com.example.ciyashop.customview.textview.TextViewBold
+                        android:id="@+id/tvProductName_two"
+                        style="@style/txt_black_big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/value_5"
+                        android:gravity="start"
+                        android:includeFontPadding="false"
+                        android:text="@string/products"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRelatedProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:elevation="@dimen/value_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/llAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvCart"
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/add_to_Cart" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_cart_white" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvBuyNow"
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/buy_now" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_cart_gray" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_whatsapp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

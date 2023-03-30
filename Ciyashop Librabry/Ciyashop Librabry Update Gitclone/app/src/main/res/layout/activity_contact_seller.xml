@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.example.ciyashop.activity.ContactSellerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <include layout="@layout/toolbar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_5"
+            android:layout_marginLeft="@dimen/value_5"
+            android:layout_marginTop="@dimen/value_5"
+            android:layout_marginEnd="@dimen/value_5"
+            android:layout_marginRight="@dimen/value_5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <com.example.ciyashop.customview.edittext.EditTextRegular
+                        android:id="@+id/etName"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="start"
+                        android:hint="@string/name"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/field_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <com.example.ciyashop.customview.edittext.EditTextRegular
+                        android:id="@+id/etEmail"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="start"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/field_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <com.example.ciyashop.customview.edittext.EditTextRegular
+                        android:id="@+id/etMessage"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ems="1"
+                        android:gravity="start"
+                        android:hint="@string/message"
+                        android:lines="5"
+                        android:maxLines="10"
+                        android:padding="@dimen/_8sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale" />
+
+                </LinearLayout>
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvSend"
+                    style="@style/txt_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:background="@drawable/primary_round_button"
+                    android:gravity="center"
+                    android:padding="@dimen/value_5"
+                    android:text="@string/send"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_whatsapp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

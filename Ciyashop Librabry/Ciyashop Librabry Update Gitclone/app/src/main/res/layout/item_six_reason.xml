@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/white_gray_strok_button"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <com.example.ciyashop.customview.textview.TextViewRegular
+                android:id="@+id/tvName"
+                style="@style/txt_black_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=""
+                android:textDirection="locale" />
+
+            <com.example.ciyashop.customview.textview.TextViewLight
+                android:id="@+id/tvDescription"
+                style="@style/txt_gray_micro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_5"
+                android:gravity="center"
+                android:lines="2"
+                android:maxLines="2"
+                android:text=""
+                android:textDirection="locale" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center|top"
+            android:background="@drawable/ic_circle"
+            android:padding="@dimen/_10sdp"
+            app:srcCompat="@drawable/placeholder" />
+
+    </FrameLayout>
+
+</LinearLayout>

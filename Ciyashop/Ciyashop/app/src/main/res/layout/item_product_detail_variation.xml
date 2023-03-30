@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/value_4"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.example.ciyashop.customview.textview.TextViewMedium
+        android:id="@+id/tvTitle"
+        style="@style/txt_color_primary_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start|center"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/color"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:textDirection="locale" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductVariation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp" />
+
+</LinearLayout>

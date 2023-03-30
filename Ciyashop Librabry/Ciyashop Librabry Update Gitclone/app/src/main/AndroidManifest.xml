@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ciyashop">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!--  Apps that target Android API 30+ (Android 11+) cannot call Facebook native apps unless the package visibility needs are declared  -->
+    <queries>
+        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+        <provider android:authorities="com.facebook.orca.provider.PlatformProvider" />
+    </queries>
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+    <queries>
+        <package android:name="com.facebook.katana" />
+    </queries>
+
+    <application
+        android:name="com.example.ciyashop.utils.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DesignDemo"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".activity.DeleteAccountActivity"
+            android:exported="false" />
+        <activity android:name=".activity.TestActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="com.example.ciyashop.activity.OrderCancelActivity"
+            android:exported="false"
+            tools:node="merge"/>
+        <activity android:name="com.example.ciyashop.activity.RepaymentActivity"
+            android:exported="false"
+            tools:node="merge"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.example.ciyashop.activity.IntroSliderActivity"
+            android:exported="false"
+            tools:node="merge"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            android:exported="false"
+            />
+        <meta-data
+            android:exported="false"
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCGtJhTi3psczF81ZI8OsgvVEV-XImpxB4" />
+
+        <meta-data
+            android:exported="false"
+            android:name="search-engine"
+            android:resource="@xml/noindex" />
+        <meta-data
+            android:exported="false"
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false" /> <!-- Register the BroadcastReceiver -->
+        <receiver
+            android:name="com.example.ciyashop.fcm.AppIndexingUpdateReceiver"
+            android:exported="false"
+            android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter
+                android:exported="false">
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX" />
+            </intent-filter>
+        </receiver> <!-- Grant the AppIndexingUpdateService permission and enable it to run after being triggered -->
+<!--        <service-->
+<!--            android:name="com.example.ciyashop.fcm.AppIndexingUpdateService"-->
+<!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
+        <service android:name="com.example.ciyashop.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter
+                android:exported="false">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.ciyashop.fcm.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:exported="false"
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:exported="false"
+            tools:node="merge"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+
+        <activity
+            android:name=".activity.HomeActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.InfiniteScrollActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.ciyashop.utils.BaseActivity" />
+        <activity
+            android:name="com.example.ciyashop.activity.SplashScreenActivity"
+            android:exported="true"
+            tools:node="merge"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter
+                android:exported="false">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="my.app"
+                    android:host="host" />
+            </intent-filter>
+
+            <intent-filter
+                android:exported="false"
+                android:autoVerify="true"
+                tools:node="merge"
+                android:label="ciyashop">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ciyashopapp.potenzaglobalsolutions.com"
+                    android:pathPrefix="/"
+                    android:scheme="https" />
+                <!-- <data android:scheme="http" /> -->
+                <!-- <data android:scheme="https" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.CartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MyAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AccountSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DeactiveAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.CategoryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.FilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SearchFromHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SearchCategoryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.RewardsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.WishListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".activity.LogInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.TermsAndPrivacyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SellerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SellerReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SearchCategoryInnerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ContactSellerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SellerMoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ProductQuickDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ImageViewerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".activity.InfoPageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ThankYouActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".activity.RateAndReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MyPointActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.VideoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.CheckAllActivity" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.BlogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.StoreFinderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.BlogDescriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.WebDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.WebViewWalletAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name="com.example.ciyashop.activity.WalletTransactionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/value_1.5"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_100">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_100"
+                    android:background="@drawable/white_gray_strok_button"
+                    android:padding="@dimen/_1sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/placeholder" />
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvDiscount"
+                    style="@style/txt_white_micro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="-20dp"
+                    android:background="@drawable/ic_off_bg"
+                    android:gravity="center"
+                    android:rotation="90"
+                    android:text="120" />
+
+                <com.example.ciyashop.customview.like.animation.SparkButton
+                    android:id="@+id/ivWishList"
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_21sdp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/ic_rounded"
+                    app:sparkbutton_activeImage="@drawable/ic_primary_heart"
+                    app:sparkbutton_iconSize="@dimen/_13sdp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_gray_heart"
+                    app:sparkbutton_primaryColor="@color/colorPrimary"
+                    app:sparkbutton_secondaryColor="@color/colorPrimaryTransperent" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <com.example.ciyashop.customview.textview.TextViewLight
+                    style="@style/txt_gray_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/value_1"
+                    android:layout_marginBottom="@dimen/value_2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        style="@style/txt_color_primary_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:gravity="center">
+
+
+
+                    <RatingBar
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/value_3"
+            android:background="@drawable/white_gray_strok_button"
+            android:orientation="vertical"
+            android:padding="@dimen/value_3">
+
+            <com.example.ciyashop.customview.textview.TextViewRegular
+                android:id="@+id/tvName"
+                style="@style/txt_gray_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="test test" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_1"
+                android:layout_marginBottom="@dimen/value_1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="150 RS" />
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice1"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_2"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text=" 100 Rs" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:progressBackgroundTint="@color/star_color"
+                    android:progressTint="@color/yello"
+                    android:rating="0"
+                    android:secondaryProgressTint="@color/star_color"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end|center">
+
+            <ImageView
+                android:id="@+id/ivAddToCart"
+                android:layout_width="@dimen/value_15"
+                android:layout_height="@dimen/value_15"
+                android:layout_gravity="bottom|end|center"
+                android:background="@drawable/blackround"
+                android:padding="@dimen/value_3"
+                app:srcCompat="@drawable/ic_cart_white" />
+
+            <!--            <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:id="@+id/ivAddToCart"-->
+            <!--                android:layout_width="@dimen/value_15"-->
+            <!--                android:layout_height="@dimen/value_15"-->
+            <!--                android:layout_gravity="bottom|end|center"-->
+            <!--                android:scaleType="fitCenter"-->
+            <!--                android:visibility="visible"-->
+            <!--                app:lottie_autoPlay="false"-->
+            <!--                app:lottie_loop="false"-->
+            <!--                android:padding="@dimen/value_3"-->
+            <!--                app:lottie_rawRes="@raw/addtocart"-->
+            <!--                app:lottie_speed="4" />-->
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/llSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:alpha="0.5"
+                android:background="@color/black"
+                android:gravity="bottom" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/value_4"
+                android:visibility="visible">
+
+                <com.example.ciyashop.customview.textview.TextViewLight
+                    style="@style/txt_white_micro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/sales_end_in" />
+
+                <com.example.ciyashop.customview.textview.TextViewLight
+                    android:id="@+id/tvSale"
+                    style="@style/txt_white_micro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/value_1"
+                    android:gravity="center"
+                    android:text=" 01:14:32"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

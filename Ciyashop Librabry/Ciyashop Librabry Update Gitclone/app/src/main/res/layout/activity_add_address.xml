@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <include layout="@layout/toolbar" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.example.ciyashop.customview.textview.TextViewMedium
+                    android:id="@+id/tvActivityTitle"
+                    style="@style/txt_black_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="start"
+                    android:text="@string/add_billing_address"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etFirstName"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/first_name"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etLastName"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/last_name"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etPincode"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/pincode"
+                            android:inputType="number"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etAddress1"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/address1"
+                            android:padding="@dimen/_8sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etAddress2"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/address2"
+                            android:padding="@dimen/_8sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etCity"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/city"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etCompany"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/company"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tilPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.example.ciyashop.customview.edittext.EditTextRegular
+                            android:id="@+id/etPhoneNumber"
+                            style="@style/txt_gray_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/phone_number"
+                            android:inputType="number"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+
+                    </LinearLayout>
+
+                    <!--lower buttons-->
+                    <LinearLayout
+                        android:id="@+id/llButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/value_5"
+                        android:layout_marginBottom="@dimen/value_5"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_6sdp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingVertical="@dimen/_5sdp">
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvCancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:background="@drawable/gray_round_button"
+                                android:gravity="center"
+                                android:paddingHorizontal="40dp"
+                                android:paddingVertical="@dimen/_8sdp"
+                                android:text="@string/cancel"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:paddingVertical="@dimen/_5sdp">
+
+                            <com.example.ciyashop.customview.textview.TextViewRegular
+                                android:id="@+id/tvSave"
+                                android:layout_width="97dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gray_round_button"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_8sdp"
+                                android:text="@string/save"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+    <!--  <include layout="@layout/layout_whatsapp"/>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

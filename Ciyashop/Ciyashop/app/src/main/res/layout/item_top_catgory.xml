@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_gray_strok_button"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/value_3" />
+
+        <com.example.ciyashop.customview.textview.TextViewLight
+            android:id="@+id/tvName"
+            style="@style/txt_black_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Test" />
+
+    </LinearLayout>
+
+</LinearLayout>

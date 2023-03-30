@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/white_gray_strok_button"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.23"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_6sdp"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.example.ciyashop.customview.textview.TextViewRegular
+                android:id="@+id/tvName"
+                style="@style/txt_black_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textDirection="locale" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/value_1"
+                android:layout_marginBottom="@dimen/value_1"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice1"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text=" 100 Rs" />
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_2"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="150 RS" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:progressBackgroundTint="@color/star_color"
+                    android:progressTint="@color/yello"
+                    android:rating="0"
+                    android:secondaryProgressTint="@color/star_color"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/gray_table" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_5"
+                android:gravity="start|center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_Delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_delete"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        android:id="@+id/tvDelete"
+                        style="@style/txt_black_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/delete"
+                        android:textColor="@color/remove" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/gray_table" />
+
+                <LinearLayout
+                    android:id="@+id/ll_AddCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_cart"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_cart_white" />
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        android:id="@+id/tvCart"
+                        style="@style/txt_black_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/move_to_bag" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

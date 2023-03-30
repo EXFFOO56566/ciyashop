@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search-engine xmlns:android="http://schemas.android.com/apk/res/android">
+    <noindex android:value="notification" />
+    <noindex uri="https://ciyashopapp.potenzaglobalsolutions.com/" />
+    <noindex uriPrefix="https://ciyashopapp.potenzaglobalsolutions.com/" />
+
+</search-engine>

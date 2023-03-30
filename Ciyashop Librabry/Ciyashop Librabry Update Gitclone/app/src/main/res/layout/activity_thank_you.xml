@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_8"
+                android:layout_marginLeft="@dimen/font_8"
+                android:layout_marginEnd="@dimen/font_8"
+                android:layout_marginRight="@dimen/font_8"
+                android:orientation="vertical">
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvThankYou"
+                    style="@style/txt_color_primary_very_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:text="@string/thank_you" />
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvOrderPlaceSuccess"
+                    style="@style/txt_black_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/font_12"
+                    android:text="@string/your_order_is_placed_successfully" />
+
+                <com.example.ciyashop.customview.textview.TextViewLight
+                    style="@style/txt_gray_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/font_5"
+                    android:text="@string/you_will_notify_in_few_momments"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/font_16"
+                    android:src="@drawable/thank_you_image" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_16"
+                android:layout_marginLeft="@dimen/font_16"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/font_16"
+                android:layout_marginRight="@dimen/font_16">
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvContinueShopping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/primary_round_button"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/font_16"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/font_12"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/continue_shopping"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivGo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/value_10"
+                    app:srcCompat="@drawable/ic_icon_arrow_right" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_16"
+                android:layout_marginLeft="@dimen/font_16"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/font_16"
+                android:layout_marginRight="@dimen/font_16">
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvGotoMyorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/primary_round_button"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/font_16"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/font_12"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/go_to_myorders"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/ivGo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/value_10"
+                    app:srcCompat="@drawable/ic_icon_arrow_right" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/layout_whatsapp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

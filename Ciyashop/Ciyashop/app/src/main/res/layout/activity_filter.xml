@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <include layout="@layout/toolbar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/llPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_gray_strok_button"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:id="@+id/tvPriceTitle"
+                            style="@style/txt_black_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvMin"
+                                    style="@style/txt_gray_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$40" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8" />
+
+                                <com.example.ciyashop.customview.textview.TextViewMedium
+                                    android:id="@+id/tvMax"
+                                    style="@style/txt_gray_small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$45" />
+
+                            </LinearLayout>
+
+                            <com.example.ciyashop.customview.rangeseekbar.interfaces.widgets.CrystalRangeSeekbar
+                                android:id="@+id/priceseekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:max_value="500"
+                                app:min_value="100" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/white_gray_strok_button"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <com.example.ciyashop.customview.textview.TextViewRegular
+                            android:id="@+id/tvcolorTitle"
+                            style="@style/txt_black_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/color"
+                            app:drawableStartCompat="@drawable/ic_color_drop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvColor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFilterType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        android:id="@+id/tvClearFilter"
+                        style="@style/txt_white_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_10"
+                        android:background="@drawable/primary_round_button"
+                        android:gravity="center"
+                        android:padding="@dimen/value_5"
+                        android:text="@string/clear_filter" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_whatsapp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

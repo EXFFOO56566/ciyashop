@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:background="@drawable/white_gray_strok_button"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <com.example.ciyashop.customview.textview.TextViewRegular
+        android:id="@+id/tvTitle"
+        style="@style/txt_gray_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start|center"
+        android:text="@string/color"
+        app:drawableEndCompat="@drawable/ic_down" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+</LinearLayout>

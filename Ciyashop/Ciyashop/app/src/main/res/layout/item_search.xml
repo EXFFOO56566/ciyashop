@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/value_10"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginRight="@dimen/value_10"
+    android:orientation="vertical">
+
+    <com.example.ciyashop.customview.textview.TextViewRegular
+        android:id="@+id/tvTitle"
+        style="@style/txt_gray_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:padding="@dimen/_5sdp"
+        android:text="hiiii"
+        android:textAlignment="viewStart"
+        android:textDirection="locale" />
+
+    <com.example.ciyashop.customview.textview.TextViewLight
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_0.5"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:background="@color/gray_table" />
+
+</LinearLayout>

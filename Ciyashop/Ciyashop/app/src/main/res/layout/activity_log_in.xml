@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.example.ciyashop.activity.LogInActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_splash" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/value_15"
+            android:paddingLeft="@dimen/value_15"
+            android:paddingTop="@dimen/value_15"
+            android:paddingEnd="@dimen/value_15"
+            android:paddingRight="@dimen/value_15"
+            android:paddingBottom="@dimen/value_15">
+
+            <ImageView
+                android:id="@+id/ivBlackBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_2"
+                app:srcCompat="@drawable/ic_back_black" />
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_20"
+                android:layout_marginBottom="@dimen/value_10"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/field_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.example.ciyashop.customview.edittext.EditTextRegular
+                        android:id="@+id/etEmail"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/font_10"
+                        android:gravity="start|center"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale"
+                        app:drawableStartCompat="@drawable/ic_mail" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/field_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <com.example.ciyashop.customview.edittext.EditTextRegular
+                        android:id="@+id/etPass"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="@dimen/font_10"
+                        android:gravity="start|center"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textDirection="locale"
+                        app:drawableStartCompat="@drawable/ic_password" />
+
+                </LinearLayout>
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvForgetPass"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/value_5"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/forgot_password" />
+
+                <com.example.ciyashop.customview.textview.TextViewBold
+                    android:id="@+id/tvSignIn"
+                    style="@style/txt_white_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/primary_round_button"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="@string/sign_in"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:background="@color/scratch_start_gradient" />
+
+                    <com.example.ciyashop.customview.textview.TextViewRegular
+                        style="@style/txt_gray_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="OR" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:background="@color/scratch_start_gradient" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivLoginWithFacebook"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        app:srcCompat="@drawable/ic_facebook" />
+
+                    <ImageView
+                        android:id="@+id/ivLoginWithGoogle"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_google" />
+
+                </LinearLayout>
+
+                <com.example.ciyashop.customview.textview.TextViewRegular
+                    android:id="@+id/tvNewUser"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:background="@android:color/transparent"
+                    android:text="@string/don_t_have_account_sign_up_now" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_50"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/layout_whatsapp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

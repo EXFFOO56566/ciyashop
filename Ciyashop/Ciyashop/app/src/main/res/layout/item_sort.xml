@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/value_5"
+    android:layout_marginLeft="@dimen/value_5"
+    android:layout_marginEnd="@dimen/value_5"
+    android:layout_marginRight="@dimen/value_5"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.example.ciyashop.customview.textview.TextViewRegular
+        android:id="@+id/tvTitle"
+        style="@style/txt_black_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="" />
+
+    <RadioButton
+        android:id="@+id/rdSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary" />
+
+</LinearLayout>
